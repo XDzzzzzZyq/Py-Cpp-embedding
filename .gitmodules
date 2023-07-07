@@ -1,3 +1,9 @@
 [submodule "Cpp2Py/src/dep/pybind"]
 	path = Cpp2Py/src/dep/pybind
 	url = https://github.com/pybind/pybind11.git
+[submodule "Cpp2Py/src/dep/imgui"]
+	path = Cpp2Py/src/dep/imgui
+	url = https://github.com/ocornut/imgui.git
+[submodule "Cpp2Py/src/dep/glm"]
+	path = Cpp2Py/src/dep/glm
+	url = https://github.com/g-truc/glm.git

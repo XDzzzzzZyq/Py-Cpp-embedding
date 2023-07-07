@@ -15,7 +15,7 @@ int main()
 
 	pybind11::scoped_interpreter guard{};
 
-	pybind11::module_ sys = pybind11::module_::import("sys");
+	//pybind11::module_ sys = pybind11::module_::import("sys");
 	
 	pybind11::exec("import sys, os");
 	pybind11::exec("sys.path.append(os.getcwd())");

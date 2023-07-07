@@ -2,6 +2,7 @@
 ZERO_CHECK.*
 ALL_BUILD.*
 TestModule.*
+Cpp2Py_B.*
 CMakeCache.txt
 Debug/
 out/

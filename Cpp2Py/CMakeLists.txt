@@ -26,19 +26,19 @@ target_include_directories (
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (
-    Cpp2Py 
+    Cpp2Py_B
     "${CORE}/Cpp2Py.cpp" 
     "${CORE}/Cpp2Py.h"
 )
 
 target_include_directories (
-    Cpp2Py 
+    Cpp2Py_B
     PRIVATE ${CORE}
     PRIVATE ${MOD}
 )
 
 target_link_libraries(
-    Cpp2Py
+    Cpp2Py_B
     PRIVATE pybind11::embed
 )
 
