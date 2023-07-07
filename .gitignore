@@ -32,11 +32,13 @@
 *.app
 
 # Build result
-ZERO_CHECK.*
-ALL_BUILD.*
 CMakeCache.txt
 Debug/
 out/
+*.log
+*.tlog
+*.iobj
+*.recipe
 
 # Project
 .vs/
