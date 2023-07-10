@@ -24,7 +24,6 @@
 *.lai
 *.la
 *.a
-*.lib
 
 # Executables
 *.exe
@@ -34,6 +33,7 @@
 # Build result
 CMakeCache.txt
 Debug/
+Release/
 out/
 *.log
 *.tlog
