@@ -123,12 +123,12 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\core;$(ProjectDir)src\modules;$(ProjectDir)src\dep\pybind\include;$(ProjectDir)src\dep\python\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\core;$(ProjectDir)src\modules;$(ProjectDir)src\dep\pybind\include;$(ProjectDir)src\dep\python\include;$(ProjectDir)src\dep\glfw\include;$(ProjectDir)src\dep\imgui;$(ProjectDir)src\dep\imgui_gl3;$(ProjectDir)src\dep\glm</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(ProjectDir)src\dep\python\libs\python39.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)src\dep\python\libs\python39.lib;$(ProjectDir)src\dep\glfw\lib-vc2019\glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -140,20 +140,42 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\core;$(ProjectDir)src\modules;$(ProjectDir)src\dep\pybind\include;$(ProjectDir)src\dep\python\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\core;$(ProjectDir)src\modules;$(ProjectDir)src\dep\pybind\include;$(ProjectDir)src\dep\python\include;$(ProjectDir)src\dep\glfw\include;$(ProjectDir)src\dep\imgui;$(ProjectDir)src\dep\imgui_gl3;$(ProjectDir)src\dep\glm</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(ProjectDir)src\dep\python\libs\python39.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)src\dep\python\libs\python39.lib;$(ProjectDir)src\dep\glfw\lib-vc2019\glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\support.h" />
+    <ClInclude Include="src\dep\imgui\imconfig.h" />
+    <ClInclude Include="src\dep\imgui\imgui.h" />
+    <ClInclude Include="src\dep\imgui\imgui_internal.h" />
+    <ClInclude Include="src\dep\imgui\imstb_rectpack.h" />
+    <ClInclude Include="src\dep\imgui\imstb_textedit.h" />
+    <ClInclude Include="src\dep\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\dep\imgui_gl3\imgui_impl_glfw.h" />
+    <ClInclude Include="src\dep\imgui_gl3\imgui_impl_opengl3.h" />
+    <ClInclude Include="src\dep\imgui_gl3\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="src\modules\UI\GuiManager.h" />
     <ClInclude Include="src\modules\Test.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\core\ModuleManager.cpp" />
+    <ClCompile Include="src\dep\imgui\imgui.cpp" />
+    <ClCompile Include="src\dep\imgui\imgui_demo.cpp" />
+    <ClCompile Include="src\dep\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\dep\imgui\imgui_tables.cpp" />
+    <ClCompile Include="src\dep\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\dep\imgui_gl3\imgui_impl_glfw.cpp" />
+    <ClCompile Include="src\dep\imgui_gl3\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\modules\UI\GuiManager.cpp" />
     <ClCompile Include="src\modules\Test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
