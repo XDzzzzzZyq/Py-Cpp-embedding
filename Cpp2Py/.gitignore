@@ -1,20 +1,5 @@
 # Build result
-ZERO_CHECK.*
-ALL_BUILD.*
-TestModule.*
-Cpp2Py_B.*
-CMakeCache.txt
-Debug/
-out/
-*.log
-*.tlog
-Cpp2Py.dir/
-*.pyd
-*.iobj
-*.recipe
-*.exp
+Build_*/
 
 # Project
 .vs/
-CMakeFiles/
-cmake_install.cmake
